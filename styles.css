@@ -1,0 +1,83 @@
+
+@font-face {
+    font-family: roboto-medium;
+    src: url(./Roboto/static/Roboto-Medium.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content {
+    display: grid;
+    grid-template-areas: "sidebar header"
+                        "sidebar dash";
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: 20% 1fr;
+    min-height: 100vh;
+    font-family: roboto-medium;
+}
+
+.header {
+    grid-area: header;
+    background-color: red;
+}
+
+.sidebar {
+     grid-area: sidebar;
+    display: grid;
+    background-color: rgb(24,146,211);
+    padding: 30px;
+    overflow:auto;
+    gap: 30px;
+    grid-template-rows: auto auto 1fr auto;
+    --font-color: white;
+    --image-height: 50px;
+    --image-width: 50px;
+    --font-size: 18px;
+
+}
+
+.dash-options, .profile-options {
+    display: grid;
+    gap: 15px;
+}
+
+.sidebar .logo img {
+    max-width: 75px;
+    max-height: 75px;
+    cursor: pointer;
+}
+
+.sidebar .logo {
+    display: flex;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.sidebar .option {
+    color: var(--font-color);
+    display: flex;
+    font-size: var(--font-size);
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.sidebar .option > img {
+    height: var(--image-height);
+    width: var(--image-width);
+    cursor: pointer;
+}
+
+.dash {
+    grid-area: dash;
+    background-color: green;
+}
