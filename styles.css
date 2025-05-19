@@ -21,21 +21,67 @@
 }
 
 .header {
+    display: grid;
     grid-area: header;
-    background-color: red;
+    background-color: white;
+    box-shadow: 0 4px 6px -9px rgba(213, 220, 227, 0.8);
+    grid-template-areas: "search header-profile"
+                        "greeting file-options";
+    grid-template-columns: 1fr 30%;
+    grid-template-rows: 1fr 1fr;
+    --icon-width: 20px;
+    --icon-height: 20px;
+    --section-padding: 30px;
 }
+
+.header .search {
+    grid-area: search;
+    padding: var(--section-padding);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.header .search > img {
+    height: var(--icon-height);
+    width: var(--icon-width);
+}
+
+.header .search > input {
+    box-sizing: border-box;
+    background-color: rgba(226,232,240,255);
+    flex: 1;
+    border-radius: 20px;
+    padding: 7px;
+    border: 0px;
+
+}
+
+.header .header-profile {
+    grid-area: header-profile;
+}
+
+.header .greeting {
+    grid-area: greetings;
+}
+
+.header .file-options {
+    grid-area: file-options;
+}
+
 
 .sidebar {
      grid-area: sidebar;
     display: grid;
-    background-color: rgb(24,146,211);
+    /*background-color: rgb(24,146,211);*/
+    background-color: rgb(40, 40, 43);
     padding: 30px;
     overflow:auto;
     gap: 30px;
     grid-template-rows: auto auto 1fr auto;
     --font-color: white;
-    --image-height: 50px;
-    --image-width: 50px;
+    --image-height: 40px;
+    --image-width: 40px;
     --font-size: 18px;
 
 }
@@ -79,5 +125,5 @@
 
 .dash {
     grid-area: dash;
-    background-color: green;
+    background-color: rgba(225,232,240,255);
 }
