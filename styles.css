@@ -183,7 +183,7 @@
     padding: 50px 20px;
     grid-template-areas: "projects accouncements"
                         "projects trending";
-    grid-template-columns: 1fr 30%;
+    grid-template-columns: 1fr 25%;
     grid-template-rows: 1fr 1fr;
     gap: 20px;
     --shadow: 4px 4px 6px -9px rgba(213, 220, 227, 0.8);
@@ -312,4 +312,45 @@
 
 .dash .trending {
     grid-area: trending;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    overflow: hidden;
+    gap: 20px;
+    height: 100%;
+}
+
+.dash .trending .trending-holder {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 20px;
+    align-items: flex-start;
+    overflow-y: auto;
+    gap: 10px;
+}
+
+.dash .trending-holder .account{
+    display: flex;
+    gap: 10px;
+    flex: 1 1 auto;
+}
+
+
+
+.dash .trending img {
+    width: 30px;
+    height: 30px;
+}
+
+.dash .trending-holder p, .dash .trending h5 {
+    font-size: 16px;
+}
+
+.dash .trending .trending-holder p {
+    font-family: roboto-normal;
 }
